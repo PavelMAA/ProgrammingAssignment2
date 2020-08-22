@@ -4,7 +4,7 @@
 ## then the cachesolve function can retrieve the inverse from the cache.
 ## Otherway, if x is a square invertible matrix, then solve(x) returns its inverse
 
-## this following function of makeCacheMatrix
+## This following function of makeCacheMatrix
 
 makeCacheMatrix <- function(x = matrix()) {
    i<-NULL
@@ -21,8 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
    }
 
 
-
-## this function for cacheSolve
+## This function for cacheSolve
 
 cacheSolve <- function(x, ...) {
           i<-x$getinverse()
@@ -30,8 +29,8 @@ cacheSolve <- function(x, ...) {
            message("getting cached data")
             return(i)
           }
-  data<-x$getinverse()## Return a matrix that is the inverse of 'x'
-    i<-solve(data, ...)
+  data<-x$getinverse()
+    i<-solve(data, ...)## Return a matrix that is the inverse of 'x'
     x$setinverse(i)
     i
   }
